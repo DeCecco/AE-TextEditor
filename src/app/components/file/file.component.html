@@ -1,0 +1,10 @@
+<div [innerHtml]="textSelected" contenteditable="true">
+</div>
+
+<textarea [(ngModel)]="textSelected" (select)="selectedText($event);"></textarea>
+
+
+<label>Synonim: </label>
+<select (click)="select();" [(ngModel)]="datamuseSelected">
+  <option [value]="val.word" *ngFor="let val of datamuseResult"> {{val.word}}</option>
+</select>
